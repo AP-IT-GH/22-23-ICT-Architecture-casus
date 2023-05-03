@@ -24,8 +24,9 @@ module.exports.handler = async (event, context) => {
 
 
     for (let record of event.Records) {
+        const { objectKey, sizes, quality } = JSON.parse(record.body);
+            
         try {
-            const { objectKey, sizes, quality } = JSON.parse(record.body);
             await resizeImage(objectKey, sizes, quality);
         } catch (err) {
             console.log(err);

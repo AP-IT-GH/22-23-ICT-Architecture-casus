@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -r dotenv/config test.js",
-    "deploy": "sls deploy"
+    "start": "nodemon -r dotenv/config test.js"
   },
   "author": "",
   "license": "ISC",
